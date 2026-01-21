@@ -1,0 +1,1647 @@
+DEBUG - 2026-01-03 06:48:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 07:41:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 07:41:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 07:42:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 07:42:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 07:42:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 07:42:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 07:42:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 07:42:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 07:44:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 07:44:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 07:44:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 07:44:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 07:44:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 07:44:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 07:44:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 07:44:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 07:44:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 07:45:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 07:45:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 07:45:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-01-03 07:45:31 --> mysqli_sql_exception: Duplicate entry 'SPD-005' for key 'kode_sepeda' in D:\XAMPPP\htdocs\uas_iqsal\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\XAMPPP\htdocs\uas_iqsal\system\Database\MySQLi\Connection.php(327): mysqli->query('UPDATE `produk`...', 0)
+#1 D:\XAMPPP\htdocs\uas_iqsal\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `produk`...')
+#2 D:\XAMPPP\htdocs\uas_iqsal\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `produk`...')
+#3 D:\XAMPPP\htdocs\uas_iqsal\system\Database\BaseBuilder.php(2521): CodeIgniter\Database\BaseConnection->query('UPDATE `produk`...', Array, false)
+#4 D:\XAMPPP\htdocs\uas_iqsal\system\Model.php(461): CodeIgniter\Database\BaseBuilder->update()
+#5 D:\XAMPPP\htdocs\uas_iqsal\system\BaseModel.php(1010): CodeIgniter\Model->doUpdate(Array, Array)
+#6 D:\XAMPPP\htdocs\uas_iqsal\system\Model.php(860): CodeIgniter\BaseModel->update(Array, Array)
+#7 D:\XAMPPP\htdocs\uas_iqsal\app\Controllers\Produk.php(72): CodeIgniter\Model->update('1', Array)
+#8 D:\XAMPPP\htdocs\uas_iqsal\system\CodeIgniter.php(933): App\Controllers\Produk->update()
+#9 D:\XAMPPP\htdocs\uas_iqsal\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produk))
+#10 D:\XAMPPP\htdocs\uas_iqsal\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\XAMPPP\htdocs\uas_iqsal\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#12 D:\XAMPPP\htdocs\uas_iqsal\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 D:\XAMPPP\htdocs\uas_iqsal\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 D:\XAMPPP\htdocs\uas_iqsal\system\rewrite.php(44): require_once('D:\\XAMPPP\\htdoc...')
+#15 {main}
+CRITICAL - 2026-01-03 07:45:31 --> CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry 'SPD-005' for key 'kode_sepeda'
+[Method: POST, Route: produk/update]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2521): CodeIgniter\Database\BaseConnection->query('UPDATE `produk` SET `kode_sepeda` = :kode_sepeda:, `nama_sepeda` = :nama_sepeda:, `id_kategori` = :id_kategori:, `stok` = :stok:, `harga` = :harga:
+WHERE `produk`.`id_produk` IN :produk.id_produk:', [...], false)
+ 2 SYSTEMPATH\Model.php(461): CodeIgniter\Database\BaseBuilder->update()
+ 3 SYSTEMPATH\BaseModel.php(1010): CodeIgniter\Model->doUpdate([...], [...])
+ 4 SYSTEMPATH\Model.php(860): CodeIgniter\BaseModel->update([...], [...])
+ 5 APPPATH\Controllers\Produk.php(72): CodeIgniter\Model->update('1', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Produk->update()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produk))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\XAMPPP\\htdocs\\uas_iqsal\\public\\index.php')
+CRITICAL - 2026-01-03 07:45:31 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry 'SPD-005' for key 'kode_sepeda'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `produk` SET `kode_sepeda` = \'SPD-005\', `nama_sepeda` = \'Speda gunung  DKm 3 U\', `id_kategori` = \'1\', `stok` = \'4\', `harga` = \'2000000.00\'
+WHERE `produk`.`id_produk` IN (\'1\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `produk` SET `kode_sepeda` = \'SPD-005\', `nama_sepeda` = \'Speda gunung  DKm 3 U\', `id_kategori` = \'1\', `stok` = \'4\', `harga` = \'2000000.00\'
+WHERE `produk`.`id_produk` IN (\'1\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2521): CodeIgniter\Database\BaseConnection->query('UPDATE `produk` SET `kode_sepeda` = :kode_sepeda:, `nama_sepeda` = :nama_sepeda:, `id_kategori` = :id_kategori:, `stok` = :stok:, `harga` = :harga:
+WHERE `produk`.`id_produk` IN :produk.id_produk:', [...], false)
+ 4 SYSTEMPATH\Model.php(461): CodeIgniter\Database\BaseBuilder->update()
+ 5 SYSTEMPATH\BaseModel.php(1010): CodeIgniter\Model->doUpdate([...], [...])
+ 6 SYSTEMPATH\Model.php(860): CodeIgniter\BaseModel->update([...], [...])
+ 7 APPPATH\Controllers\Produk.php(72): CodeIgniter\Model->update('1', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Produk->update()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produk))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('D:\\XAMPPP\\htdocs\\uas_iqsal\\public\\index.php')
+CRITICAL - 2026-01-03 07:45:31 --> [Caused by] mysqli_sql_exception: Duplicate entry 'SPD-005' for key 'kode_sepeda'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('UPDATE `produk` SET `kode_sepeda` = \'SPD-005\', `nama_sepeda` = \'Speda gunung  DKm 3 U\', `id_kategori` = \'1\', `stok` = \'4\', `harga` = \'2000000.00\'
+WHERE `produk`.`id_produk` IN (\'1\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `produk` SET `kode_sepeda` = \'SPD-005\', `nama_sepeda` = \'Speda gunung  DKm 3 U\', `id_kategori` = \'1\', `stok` = \'4\', `harga` = \'2000000.00\'
+WHERE `produk`.`id_produk` IN (\'1\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `produk` SET `kode_sepeda` = \'SPD-005\', `nama_sepeda` = \'Speda gunung  DKm 3 U\', `id_kategori` = \'1\', `stok` = \'4\', `harga` = \'2000000.00\'
+WHERE `produk`.`id_produk` IN (\'1\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2521): CodeIgniter\Database\BaseConnection->query('UPDATE `produk` SET `kode_sepeda` = :kode_sepeda:, `nama_sepeda` = :nama_sepeda:, `id_kategori` = :id_kategori:, `stok` = :stok:, `harga` = :harga:
+WHERE `produk`.`id_produk` IN :produk.id_produk:', [...], false)
+ 5 SYSTEMPATH\Model.php(461): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(1010): CodeIgniter\Model->doUpdate([...], [...])
+ 7 SYSTEMPATH\Model.php(860): CodeIgniter\BaseModel->update([...], [...])
+ 8 APPPATH\Controllers\Produk.php(72): CodeIgniter\Model->update('1', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Produk->update()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produk))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('D:\\XAMPPP\\htdocs\\uas_iqsal\\public\\index.php')
+DEBUG - 2026-01-03 07:45:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 07:45:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 07:45:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 07:46:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 07:46:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 07:46:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 07:46:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 07:51:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 07:52:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 07:52:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 07:57:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 08:25:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 08:25:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 08:33:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 08:33:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 08:33:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 08:33:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 08:33:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 08:33:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 08:34:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 08:34:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 08:34:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 08:34:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 08:34:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 08:34:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 08:34:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 08:35:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 08:35:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 08:35:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 08:35:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 08:35:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 08:35:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 08:36:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 08:36:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 08:36:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 08:36:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 08:36:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 08:37:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 08:37:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 08:38:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 08:44:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 08:44:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 08:44:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 08:44:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 08:44:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 08:44:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 08:45:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 08:45:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 08:45:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 08:45:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 08:46:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 08:46:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 08:47:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 08:47:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 08:47:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 08:47:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 08:52:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 08:53:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 08:53:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 08:53:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 08:53:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 08:53:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 08:53:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 08:53:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 08:53:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 08:53:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 08:53:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 08:54:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 08:54:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 08:54:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 08:54:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 08:55:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 08:55:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 08:55:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 08:55:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 08:55:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 08:56:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 08:56:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 08:58:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 08:59:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 09:00:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 09:00:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 09:00:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 09:01:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 09:01:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 09:01:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 09:01:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 09:04:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-01-03 09:04:51 --> mysqli_sql_exception: Duplicate entry 'SPD-006' for key 'kode_sepeda' in D:\XAMPPP\htdocs\uas_iqsal\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\XAMPPP\htdocs\uas_iqsal\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `pr...', 0)
+#1 D:\XAMPPP\htdocs\uas_iqsal\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pr...')
+#2 D:\XAMPPP\htdocs\uas_iqsal\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pr...')
+#3 D:\XAMPPP\htdocs\uas_iqsal\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pr...', Array, false)
+#4 D:\XAMPPP\htdocs\uas_iqsal\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 D:\XAMPPP\htdocs\uas_iqsal\system\BaseModel.php(838): CodeIgniter\Model->doInsert(Array)
+#6 D:\XAMPPP\htdocs\uas_iqsal\system\Model.php(797): CodeIgniter\BaseModel->insert(Array, false)
+#7 D:\XAMPPP\htdocs\uas_iqsal\system\BaseModel.php(751): CodeIgniter\Model->insert(Array, false)
+#8 D:\XAMPPP\htdocs\uas_iqsal\app\Controllers\Produk.php(119): CodeIgniter\BaseModel->save(Array)
+#9 D:\XAMPPP\htdocs\uas_iqsal\system\CodeIgniter.php(933): App\Controllers\Produk->save()
+#10 D:\XAMPPP\htdocs\uas_iqsal\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produk))
+#11 D:\XAMPPP\htdocs\uas_iqsal\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 D:\XAMPPP\htdocs\uas_iqsal\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#13 D:\XAMPPP\htdocs\uas_iqsal\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 D:\XAMPPP\htdocs\uas_iqsal\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 D:\XAMPPP\htdocs\uas_iqsal\system\rewrite.php(44): require_once('D:\\XAMPPP\\htdoc...')
+#16 {main}
+CRITICAL - 2026-01-03 09:04:51 --> CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry 'SPD-006' for key 'kode_sepeda'
+[Method: POST, Route: produk/simpan]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `produk` (`kode_sepeda`, `nama_sepeda`, `id_kategori`, `stok`, `harga`) VALUES (:kode_sepeda:, :nama_sepeda:, :id_kategori:, :stok:, :harga:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(838): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(797): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\Produk.php(119): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Produk->save()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produk))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('D:\\XAMPPP\\htdocs\\uas_iqsal\\public\\index.php')
+CRITICAL - 2026-01-03 09:04:51 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry 'SPD-006' for key 'kode_sepeda'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `produk` (`kode_sepeda`, `nama_sepeda`, `id_kategori`, `stok`, `harga`) VALUES (\'SPD-006\', \'BMX SHIVVA\', \'3\', \'4\', \'2000000\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `produk` (`kode_sepeda`, `nama_sepeda`, `id_kategori`, `stok`, `harga`) VALUES (\'SPD-006\', \'BMX SHIVVA\', \'3\', \'4\', \'2000000\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `produk` (`kode_sepeda`, `nama_sepeda`, `id_kategori`, `stok`, `harga`) VALUES (:kode_sepeda:, :nama_sepeda:, :id_kategori:, :stok:, :harga:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(838): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(797): CodeIgniter\BaseModel->insert([...], false)
+ 7 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
+ 8 APPPATH\Controllers\Produk.php(119): CodeIgniter\BaseModel->save([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Produk->save()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produk))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('D:\\XAMPPP\\htdocs\\uas_iqsal\\public\\index.php')
+CRITICAL - 2026-01-03 09:04:51 --> [Caused by] mysqli_sql_exception: Duplicate entry 'SPD-006' for key 'kode_sepeda'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `produk` (`kode_sepeda`, `nama_sepeda`, `id_kategori`, `stok`, `harga`) VALUES (\'SPD-006\', \'BMX SHIVVA\', \'3\', \'4\', \'2000000\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `produk` (`kode_sepeda`, `nama_sepeda`, `id_kategori`, `stok`, `harga`) VALUES (\'SPD-006\', \'BMX SHIVVA\', \'3\', \'4\', \'2000000\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `produk` (`kode_sepeda`, `nama_sepeda`, `id_kategori`, `stok`, `harga`) VALUES (\'SPD-006\', \'BMX SHIVVA\', \'3\', \'4\', \'2000000\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `produk` (`kode_sepeda`, `nama_sepeda`, `id_kategori`, `stok`, `harga`) VALUES (:kode_sepeda:, :nama_sepeda:, :id_kategori:, :stok:, :harga:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(838): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(797): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\Produk.php(119): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Produk->save()
+11 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produk))
+12 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+16 SYSTEMPATH\rewrite.php(44): require_once('D:\\XAMPPP\\htdocs\\uas_iqsal\\public\\index.php')
+DEBUG - 2026-01-03 09:04:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 09:18:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 09:18:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 09:18:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 09:18:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 09:18:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 09:18:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 09:19:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 09:19:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 09:19:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-01-03 09:19:15 --> ErrorException: Undefined array key "id_produk"
+[Method: GET, Route: produk]
+in APPPATH\Views\produk\index.php on line 91.
+ 1 APPPATH\Views\produk\index.php(91): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_produk"', 'D:\\XAMPPP\\htdocs\\uas_iqsal\\app\\Views\\produk\\index.php', 91)
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\XAMPPP\\htdocs\\uas_iqsal\\app\\Views\\produk\\index.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1199): CodeIgniter\View\View->render('produk/index', [], true)
+ 5 APPPATH\Controllers\Produk.php(49): view('produk/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Produk->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produk))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\XAMPPP\\htdocs\\uas_iqsal\\public\\index.php')
+DEBUG - 2026-01-03 09:19:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-01-03 09:19:17 --> ErrorException: Undefined array key "id_produk"
+[Method: GET, Route: produk]
+in APPPATH\Views\produk\index.php on line 91.
+ 1 APPPATH\Views\produk\index.php(91): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_produk"', 'D:\\XAMPPP\\htdocs\\uas_iqsal\\app\\Views\\produk\\index.php', 91)
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\XAMPPP\\htdocs\\uas_iqsal\\app\\Views\\produk\\index.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1199): CodeIgniter\View\View->render('produk/index', [], true)
+ 5 APPPATH\Controllers\Produk.php(49): view('produk/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Produk->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produk))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\XAMPPP\\htdocs\\uas_iqsal\\public\\index.php')
+DEBUG - 2026-01-03 09:19:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-01-03 09:19:21 --> ErrorException: Undefined array key "id_produk"
+[Method: GET, Route: produk]
+in APPPATH\Views\produk\index.php on line 91.
+ 1 APPPATH\Views\produk\index.php(91): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_produk"', 'D:\\XAMPPP\\htdocs\\uas_iqsal\\app\\Views\\produk\\index.php', 91)
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\XAMPPP\\htdocs\\uas_iqsal\\app\\Views\\produk\\index.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1199): CodeIgniter\View\View->render('produk/index', [], true)
+ 5 APPPATH\Controllers\Produk.php(49): view('produk/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Produk->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produk))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\XAMPPP\\htdocs\\uas_iqsal\\public\\index.php')
+DEBUG - 2026-01-03 09:19:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 09:19:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-01-03 09:19:23 --> ErrorException: Undefined array key "id_produk"
+[Method: GET, Route: produk]
+in APPPATH\Views\produk\index.php on line 91.
+ 1 APPPATH\Views\produk\index.php(91): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_produk"', 'D:\\XAMPPP\\htdocs\\uas_iqsal\\app\\Views\\produk\\index.php', 91)
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\XAMPPP\\htdocs\\uas_iqsal\\app\\Views\\produk\\index.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1199): CodeIgniter\View\View->render('produk/index', [], true)
+ 5 APPPATH\Controllers\Produk.php(49): view('produk/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Produk->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produk))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\XAMPPP\\htdocs\\uas_iqsal\\public\\index.php')
+DEBUG - 2026-01-03 09:19:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 09:19:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 09:19:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 09:19:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 09:19:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-01-03 09:19:33 --> ErrorException: Undefined array key "id_produk"
+[Method: GET, Route: produk]
+in APPPATH\Views\produk\index.php on line 91.
+ 1 APPPATH\Views\produk\index.php(91): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_produk"', 'D:\\XAMPPP\\htdocs\\uas_iqsal\\app\\Views\\produk\\index.php', 91)
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\XAMPPP\\htdocs\\uas_iqsal\\app\\Views\\produk\\index.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1199): CodeIgniter\View\View->render('produk/index', [], true)
+ 5 APPPATH\Controllers\Produk.php(49): view('produk/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Produk->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produk))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\XAMPPP\\htdocs\\uas_iqsal\\public\\index.php')
+DEBUG - 2026-01-03 09:20:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 09:20:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 09:20:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 09:20:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 09:20:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-01-03 09:20:14 --> ErrorException: Undefined array key "id_produk"
+[Method: GET, Route: /]
+in APPPATH\Views\produk\index.php on line 91.
+ 1 APPPATH\Views\produk\index.php(91): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_produk"', 'D:\\XAMPPP\\htdocs\\uas_iqsal\\app\\Views\\produk\\index.php', 91)
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\XAMPPP\\htdocs\\uas_iqsal\\app\\Views\\produk\\index.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1199): CodeIgniter\View\View->render('produk/index', [], true)
+ 5 APPPATH\Controllers\Produk.php(49): view('produk/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Produk->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produk))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\XAMPPP\\htdocs\\uas_iqsal\\public\\index.php')
+DEBUG - 2026-01-03 09:20:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-01-03 09:20:17 --> ErrorException: Undefined array key "id_produk"
+[Method: GET, Route: /]
+in APPPATH\Views\produk\index.php on line 91.
+ 1 APPPATH\Views\produk\index.php(91): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_produk"', 'D:\\XAMPPP\\htdocs\\uas_iqsal\\app\\Views\\produk\\index.php', 91)
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\XAMPPP\\htdocs\\uas_iqsal\\app\\Views\\produk\\index.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1199): CodeIgniter\View\View->render('produk/index', [], true)
+ 5 APPPATH\Controllers\Produk.php(49): view('produk/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Produk->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produk))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\XAMPPP\\htdocs\\uas_iqsal\\public\\index.php')
+DEBUG - 2026-01-03 09:21:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 09:23:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 09:23:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 09:23:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 09:23:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 09:27:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 09:27:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 09:27:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 09:27:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 09:27:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 09:27:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 09:27:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 09:27:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 09:29:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 09:29:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 09:29:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 09:29:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 09:29:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 09:29:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 09:34:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 09:34:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 09:34:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 09:34:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 09:34:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 09:34:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 09:34:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 09:34:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 09:34:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 09:34:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 09:42:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 09:42:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 09:42:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 09:43:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 09:43:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 09:43:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 09:43:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 09:43:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 09:43:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 09:44:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 09:44:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 09:44:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 09:44:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 09:44:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 09:44:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 09:44:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 09:52:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 09:52:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 09:52:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 09:52:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 09:52:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 09:52:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 09:52:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-01-03 09:52:32 --> mysqli_sql_exception: Unknown column 'keterangan' in 'field list' in D:\XAMPPP\htdocs\uas_iqsal\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\XAMPPP\htdocs\uas_iqsal\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `ri...', 0)
+#1 D:\XAMPPP\htdocs\uas_iqsal\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ri...')
+#2 D:\XAMPPP\htdocs\uas_iqsal\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ri...')
+#3 D:\XAMPPP\htdocs\uas_iqsal\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ri...', Array, false)
+#4 D:\XAMPPP\htdocs\uas_iqsal\app\Controllers\Produk.php(132): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 D:\XAMPPP\htdocs\uas_iqsal\system\CodeIgniter.php(933): App\Controllers\Produk->save()
+#6 D:\XAMPPP\htdocs\uas_iqsal\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produk))
+#7 D:\XAMPPP\htdocs\uas_iqsal\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\XAMPPP\htdocs\uas_iqsal\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#9 D:\XAMPPP\htdocs\uas_iqsal\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 D:\XAMPPP\htdocs\uas_iqsal\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 D:\XAMPPP\htdocs\uas_iqsal\system\rewrite.php(44): require_once('D:\\XAMPPP\\htdoc...')
+#12 {main}
+CRITICAL - 2026-01-03 09:52:32 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'keterangan' in 'field list'
+[Method: POST, Route: produk/simpan]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `riwayat_stok` (`kode_sepeda`, `tipe`, `jumlah`, `keterangan`, `tanggal`) VALUES (:kode_sepeda:, :tipe:, :jumlah:, :keterangan:, :tanggal:)', [...], false)
+ 2 APPPATH\Controllers\Produk.php(132): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Produk->save()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produk))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('D:\\XAMPPP\\htdocs\\uas_iqsal\\public\\index.php')
+CRITICAL - 2026-01-03 09:52:32 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'keterangan' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `riwayat_stok` (`kode_sepeda`, `tipe`, `jumlah`, `keterangan`, `tanggal`) VALUES (\'SPD-005\', \'Masuk\', 4, \'Daftar Unit Baru di Gudang\', \'2026-01-03 09:52:32\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `riwayat_stok` (`kode_sepeda`, `tipe`, `jumlah`, `keterangan`, `tanggal`) VALUES (\'SPD-005\', \'Masuk\', 4, \'Daftar Unit Baru di Gudang\', \'2026-01-03 09:52:32\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `riwayat_stok` (`kode_sepeda`, `tipe`, `jumlah`, `keterangan`, `tanggal`) VALUES (:kode_sepeda:, :tipe:, :jumlah:, :keterangan:, :tanggal:)', [...], false)
+ 4 APPPATH\Controllers\Produk.php(132): CodeIgniter\Database\BaseBuilder->insert([...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Produk->save()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produk))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('D:\\XAMPPP\\htdocs\\uas_iqsal\\public\\index.php')
+CRITICAL - 2026-01-03 09:52:32 --> [Caused by] mysqli_sql_exception: Unknown column 'keterangan' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `riwayat_stok` (`kode_sepeda`, `tipe`, `jumlah`, `keterangan`, `tanggal`) VALUES (\'SPD-005\', \'Masuk\', 4, \'Daftar Unit Baru di Gudang\', \'2026-01-03 09:52:32\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `riwayat_stok` (`kode_sepeda`, `tipe`, `jumlah`, `keterangan`, `tanggal`) VALUES (\'SPD-005\', \'Masuk\', 4, \'Daftar Unit Baru di Gudang\', \'2026-01-03 09:52:32\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `riwayat_stok` (`kode_sepeda`, `tipe`, `jumlah`, `keterangan`, `tanggal`) VALUES (\'SPD-005\', \'Masuk\', 4, \'Daftar Unit Baru di Gudang\', \'2026-01-03 09:52:32\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `riwayat_stok` (`kode_sepeda`, `tipe`, `jumlah`, `keterangan`, `tanggal`) VALUES (:kode_sepeda:, :tipe:, :jumlah:, :keterangan:, :tanggal:)', [...], false)
+ 5 APPPATH\Controllers\Produk.php(132): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Produk->save()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produk))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\XAMPPP\\htdocs\\uas_iqsal\\public\\index.php')
+DEBUG - 2026-01-03 09:53:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-01-03 09:53:01 --> mysqli_sql_exception: Unknown column 'keterangan' in 'field list' in D:\XAMPPP\htdocs\uas_iqsal\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\XAMPPP\htdocs\uas_iqsal\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `ri...', 0)
+#1 D:\XAMPPP\htdocs\uas_iqsal\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ri...')
+#2 D:\XAMPPP\htdocs\uas_iqsal\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ri...')
+#3 D:\XAMPPP\htdocs\uas_iqsal\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ri...', Array, false)
+#4 D:\XAMPPP\htdocs\uas_iqsal\app\Controllers\Produk.php(132): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 D:\XAMPPP\htdocs\uas_iqsal\system\CodeIgniter.php(933): App\Controllers\Produk->save()
+#6 D:\XAMPPP\htdocs\uas_iqsal\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produk))
+#7 D:\XAMPPP\htdocs\uas_iqsal\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\XAMPPP\htdocs\uas_iqsal\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#9 D:\XAMPPP\htdocs\uas_iqsal\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 D:\XAMPPP\htdocs\uas_iqsal\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 D:\XAMPPP\htdocs\uas_iqsal\system\rewrite.php(44): require_once('D:\\XAMPPP\\htdoc...')
+#12 {main}
+CRITICAL - 2026-01-03 09:53:01 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'keterangan' in 'field list'
+[Method: POST, Route: produk/simpan]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `riwayat_stok` (`kode_sepeda`, `tipe`, `jumlah`, `keterangan`, `tanggal`) VALUES (:kode_sepeda:, :tipe:, :jumlah:, :keterangan:, :tanggal:)', [...], false)
+ 2 APPPATH\Controllers\Produk.php(132): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Produk->save()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produk))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('D:\\XAMPPP\\htdocs\\uas_iqsal\\public\\index.php')
+CRITICAL - 2026-01-03 09:53:01 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'keterangan' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `riwayat_stok` (`kode_sepeda`, `tipe`, `jumlah`, `keterangan`, `tanggal`) VALUES (\'SPD-005\', \'Masuk\', 4, \'Penambahan Stok Unit (Restock)\', \'2026-01-03 09:53:01\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `riwayat_stok` (`kode_sepeda`, `tipe`, `jumlah`, `keterangan`, `tanggal`) VALUES (\'SPD-005\', \'Masuk\', 4, \'Penambahan Stok Unit (Restock)\', \'2026-01-03 09:53:01\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `riwayat_stok` (`kode_sepeda`, `tipe`, `jumlah`, `keterangan`, `tanggal`) VALUES (:kode_sepeda:, :tipe:, :jumlah:, :keterangan:, :tanggal:)', [...], false)
+ 4 APPPATH\Controllers\Produk.php(132): CodeIgniter\Database\BaseBuilder->insert([...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Produk->save()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produk))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('D:\\XAMPPP\\htdocs\\uas_iqsal\\public\\index.php')
+CRITICAL - 2026-01-03 09:53:01 --> [Caused by] mysqli_sql_exception: Unknown column 'keterangan' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `riwayat_stok` (`kode_sepeda`, `tipe`, `jumlah`, `keterangan`, `tanggal`) VALUES (\'SPD-005\', \'Masuk\', 4, \'Penambahan Stok Unit (Restock)\', \'2026-01-03 09:53:01\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `riwayat_stok` (`kode_sepeda`, `tipe`, `jumlah`, `keterangan`, `tanggal`) VALUES (\'SPD-005\', \'Masuk\', 4, \'Penambahan Stok Unit (Restock)\', \'2026-01-03 09:53:01\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `riwayat_stok` (`kode_sepeda`, `tipe`, `jumlah`, `keterangan`, `tanggal`) VALUES (\'SPD-005\', \'Masuk\', 4, \'Penambahan Stok Unit (Restock)\', \'2026-01-03 09:53:01\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `riwayat_stok` (`kode_sepeda`, `tipe`, `jumlah`, `keterangan`, `tanggal`) VALUES (:kode_sepeda:, :tipe:, :jumlah:, :keterangan:, :tanggal:)', [...], false)
+ 5 APPPATH\Controllers\Produk.php(132): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Produk->save()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produk))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\XAMPPP\\htdocs\\uas_iqsal\\public\\index.php')
+DEBUG - 2026-01-03 09:53:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 09:53:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 09:53:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 09:53:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 09:53:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-01-03 09:53:28 --> mysqli_sql_exception: Unknown column 'keterangan' in 'field list' in D:\XAMPPP\htdocs\uas_iqsal\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\XAMPPP\htdocs\uas_iqsal\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `ri...', 0)
+#1 D:\XAMPPP\htdocs\uas_iqsal\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ri...')
+#2 D:\XAMPPP\htdocs\uas_iqsal\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ri...')
+#3 D:\XAMPPP\htdocs\uas_iqsal\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ri...', Array, false)
+#4 D:\XAMPPP\htdocs\uas_iqsal\app\Controllers\Produk.php(132): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 D:\XAMPPP\htdocs\uas_iqsal\system\CodeIgniter.php(933): App\Controllers\Produk->save()
+#6 D:\XAMPPP\htdocs\uas_iqsal\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produk))
+#7 D:\XAMPPP\htdocs\uas_iqsal\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\XAMPPP\htdocs\uas_iqsal\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#9 D:\XAMPPP\htdocs\uas_iqsal\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 D:\XAMPPP\htdocs\uas_iqsal\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 D:\XAMPPP\htdocs\uas_iqsal\system\rewrite.php(44): require_once('D:\\XAMPPP\\htdoc...')
+#12 {main}
+CRITICAL - 2026-01-03 09:53:28 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'keterangan' in 'field list'
+[Method: POST, Route: produk/simpan]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `riwayat_stok` (`kode_sepeda`, `tipe`, `jumlah`, `keterangan`, `tanggal`) VALUES (:kode_sepeda:, :tipe:, :jumlah:, :keterangan:, :tanggal:)', [...], false)
+ 2 APPPATH\Controllers\Produk.php(132): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Produk->save()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produk))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('D:\\XAMPPP\\htdocs\\uas_iqsal\\public\\index.php')
+CRITICAL - 2026-01-03 09:53:28 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'keterangan' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `riwayat_stok` (`kode_sepeda`, `tipe`, `jumlah`, `keterangan`, `tanggal`) VALUES (\'SPD-006\', \'Masuk\', 4, \'Daftar Unit Baru di Gudang\', \'2026-01-03 09:53:28\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `riwayat_stok` (`kode_sepeda`, `tipe`, `jumlah`, `keterangan`, `tanggal`) VALUES (\'SPD-006\', \'Masuk\', 4, \'Daftar Unit Baru di Gudang\', \'2026-01-03 09:53:28\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `riwayat_stok` (`kode_sepeda`, `tipe`, `jumlah`, `keterangan`, `tanggal`) VALUES (:kode_sepeda:, :tipe:, :jumlah:, :keterangan:, :tanggal:)', [...], false)
+ 4 APPPATH\Controllers\Produk.php(132): CodeIgniter\Database\BaseBuilder->insert([...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Produk->save()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produk))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('D:\\XAMPPP\\htdocs\\uas_iqsal\\public\\index.php')
+CRITICAL - 2026-01-03 09:53:28 --> [Caused by] mysqli_sql_exception: Unknown column 'keterangan' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `riwayat_stok` (`kode_sepeda`, `tipe`, `jumlah`, `keterangan`, `tanggal`) VALUES (\'SPD-006\', \'Masuk\', 4, \'Daftar Unit Baru di Gudang\', \'2026-01-03 09:53:28\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `riwayat_stok` (`kode_sepeda`, `tipe`, `jumlah`, `keterangan`, `tanggal`) VALUES (\'SPD-006\', \'Masuk\', 4, \'Daftar Unit Baru di Gudang\', \'2026-01-03 09:53:28\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `riwayat_stok` (`kode_sepeda`, `tipe`, `jumlah`, `keterangan`, `tanggal`) VALUES (\'SPD-006\', \'Masuk\', 4, \'Daftar Unit Baru di Gudang\', \'2026-01-03 09:53:28\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `riwayat_stok` (`kode_sepeda`, `tipe`, `jumlah`, `keterangan`, `tanggal`) VALUES (:kode_sepeda:, :tipe:, :jumlah:, :keterangan:, :tanggal:)', [...], false)
+ 5 APPPATH\Controllers\Produk.php(132): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Produk->save()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produk))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\XAMPPP\\htdocs\\uas_iqsal\\public\\index.php')
+DEBUG - 2026-01-03 09:53:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-01-03 09:53:57 --> mysqli_sql_exception: Unknown column 'keterangan' in 'field list' in D:\XAMPPP\htdocs\uas_iqsal\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\XAMPPP\htdocs\uas_iqsal\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `ri...', 0)
+#1 D:\XAMPPP\htdocs\uas_iqsal\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ri...')
+#2 D:\XAMPPP\htdocs\uas_iqsal\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ri...')
+#3 D:\XAMPPP\htdocs\uas_iqsal\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ri...', Array, false)
+#4 D:\XAMPPP\htdocs\uas_iqsal\app\Controllers\Produk.php(132): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 D:\XAMPPP\htdocs\uas_iqsal\system\CodeIgniter.php(933): App\Controllers\Produk->save()
+#6 D:\XAMPPP\htdocs\uas_iqsal\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produk))
+#7 D:\XAMPPP\htdocs\uas_iqsal\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\XAMPPP\htdocs\uas_iqsal\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#9 D:\XAMPPP\htdocs\uas_iqsal\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 D:\XAMPPP\htdocs\uas_iqsal\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 D:\XAMPPP\htdocs\uas_iqsal\system\rewrite.php(44): require_once('D:\\XAMPPP\\htdoc...')
+#12 {main}
+CRITICAL - 2026-01-03 09:53:57 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'keterangan' in 'field list'
+[Method: POST, Route: produk/simpan]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `riwayat_stok` (`kode_sepeda`, `tipe`, `jumlah`, `keterangan`, `tanggal`) VALUES (:kode_sepeda:, :tipe:, :jumlah:, :keterangan:, :tanggal:)', [...], false)
+ 2 APPPATH\Controllers\Produk.php(132): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Produk->save()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produk))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('D:\\XAMPPP\\htdocs\\uas_iqsal\\public\\index.php')
+CRITICAL - 2026-01-03 09:53:57 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'keterangan' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `riwayat_stok` (`kode_sepeda`, `tipe`, `jumlah`, `keterangan`, `tanggal`) VALUES (\'SPD-006\', \'Masuk\', 4, \'Penambahan Stok Unit (Restock)\', \'2026-01-03 09:53:57\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `riwayat_stok` (`kode_sepeda`, `tipe`, `jumlah`, `keterangan`, `tanggal`) VALUES (\'SPD-006\', \'Masuk\', 4, \'Penambahan Stok Unit (Restock)\', \'2026-01-03 09:53:57\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `riwayat_stok` (`kode_sepeda`, `tipe`, `jumlah`, `keterangan`, `tanggal`) VALUES (:kode_sepeda:, :tipe:, :jumlah:, :keterangan:, :tanggal:)', [...], false)
+ 4 APPPATH\Controllers\Produk.php(132): CodeIgniter\Database\BaseBuilder->insert([...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Produk->save()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produk))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('D:\\XAMPPP\\htdocs\\uas_iqsal\\public\\index.php')
+CRITICAL - 2026-01-03 09:53:57 --> [Caused by] mysqli_sql_exception: Unknown column 'keterangan' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `riwayat_stok` (`kode_sepeda`, `tipe`, `jumlah`, `keterangan`, `tanggal`) VALUES (\'SPD-006\', \'Masuk\', 4, \'Penambahan Stok Unit (Restock)\', \'2026-01-03 09:53:57\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `riwayat_stok` (`kode_sepeda`, `tipe`, `jumlah`, `keterangan`, `tanggal`) VALUES (\'SPD-006\', \'Masuk\', 4, \'Penambahan Stok Unit (Restock)\', \'2026-01-03 09:53:57\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `riwayat_stok` (`kode_sepeda`, `tipe`, `jumlah`, `keterangan`, `tanggal`) VALUES (\'SPD-006\', \'Masuk\', 4, \'Penambahan Stok Unit (Restock)\', \'2026-01-03 09:53:57\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `riwayat_stok` (`kode_sepeda`, `tipe`, `jumlah`, `keterangan`, `tanggal`) VALUES (:kode_sepeda:, :tipe:, :jumlah:, :keterangan:, :tanggal:)', [...], false)
+ 5 APPPATH\Controllers\Produk.php(132): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Produk->save()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produk))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\XAMPPP\\htdocs\\uas_iqsal\\public\\index.php')
+DEBUG - 2026-01-03 09:54:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-01-03 09:54:07 --> mysqli_sql_exception: Unknown column 'keterangan' in 'field list' in D:\XAMPPP\htdocs\uas_iqsal\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\XAMPPP\htdocs\uas_iqsal\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `ri...', 0)
+#1 D:\XAMPPP\htdocs\uas_iqsal\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ri...')
+#2 D:\XAMPPP\htdocs\uas_iqsal\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ri...')
+#3 D:\XAMPPP\htdocs\uas_iqsal\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ri...', Array, false)
+#4 D:\XAMPPP\htdocs\uas_iqsal\app\Controllers\Produk.php(132): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 D:\XAMPPP\htdocs\uas_iqsal\system\CodeIgniter.php(933): App\Controllers\Produk->save()
+#6 D:\XAMPPP\htdocs\uas_iqsal\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produk))
+#7 D:\XAMPPP\htdocs\uas_iqsal\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\XAMPPP\htdocs\uas_iqsal\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#9 D:\XAMPPP\htdocs\uas_iqsal\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 D:\XAMPPP\htdocs\uas_iqsal\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 D:\XAMPPP\htdocs\uas_iqsal\system\rewrite.php(44): require_once('D:\\XAMPPP\\htdoc...')
+#12 {main}
+CRITICAL - 2026-01-03 09:54:07 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'keterangan' in 'field list'
+[Method: POST, Route: produk/simpan]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `riwayat_stok` (`kode_sepeda`, `tipe`, `jumlah`, `keterangan`, `tanggal`) VALUES (:kode_sepeda:, :tipe:, :jumlah:, :keterangan:, :tanggal:)', [...], false)
+ 2 APPPATH\Controllers\Produk.php(132): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Produk->save()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produk))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('D:\\XAMPPP\\htdocs\\uas_iqsal\\public\\index.php')
+CRITICAL - 2026-01-03 09:54:07 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'keterangan' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `riwayat_stok` (`kode_sepeda`, `tipe`, `jumlah`, `keterangan`, `tanggal`) VALUES (\'SPD-006\', \'Masuk\', 4, \'Penambahan Stok Unit (Restock)\', \'2026-01-03 09:54:07\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `riwayat_stok` (`kode_sepeda`, `tipe`, `jumlah`, `keterangan`, `tanggal`) VALUES (\'SPD-006\', \'Masuk\', 4, \'Penambahan Stok Unit (Restock)\', \'2026-01-03 09:54:07\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `riwayat_stok` (`kode_sepeda`, `tipe`, `jumlah`, `keterangan`, `tanggal`) VALUES (:kode_sepeda:, :tipe:, :jumlah:, :keterangan:, :tanggal:)', [...], false)
+ 4 APPPATH\Controllers\Produk.php(132): CodeIgniter\Database\BaseBuilder->insert([...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Produk->save()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produk))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('D:\\XAMPPP\\htdocs\\uas_iqsal\\public\\index.php')
+CRITICAL - 2026-01-03 09:54:07 --> [Caused by] mysqli_sql_exception: Unknown column 'keterangan' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `riwayat_stok` (`kode_sepeda`, `tipe`, `jumlah`, `keterangan`, `tanggal`) VALUES (\'SPD-006\', \'Masuk\', 4, \'Penambahan Stok Unit (Restock)\', \'2026-01-03 09:54:07\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `riwayat_stok` (`kode_sepeda`, `tipe`, `jumlah`, `keterangan`, `tanggal`) VALUES (\'SPD-006\', \'Masuk\', 4, \'Penambahan Stok Unit (Restock)\', \'2026-01-03 09:54:07\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `riwayat_stok` (`kode_sepeda`, `tipe`, `jumlah`, `keterangan`, `tanggal`) VALUES (\'SPD-006\', \'Masuk\', 4, \'Penambahan Stok Unit (Restock)\', \'2026-01-03 09:54:07\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `riwayat_stok` (`kode_sepeda`, `tipe`, `jumlah`, `keterangan`, `tanggal`) VALUES (:kode_sepeda:, :tipe:, :jumlah:, :keterangan:, :tanggal:)', [...], false)
+ 5 APPPATH\Controllers\Produk.php(132): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Produk->save()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produk))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\XAMPPP\\htdocs\\uas_iqsal\\public\\index.php')
+DEBUG - 2026-01-03 09:54:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 09:54:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 09:54:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 09:54:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 09:54:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 09:54:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 09:54:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-01-03 09:54:49 --> mysqli_sql_exception: Unknown column 'keterangan' in 'field list' in D:\XAMPPP\htdocs\uas_iqsal\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\XAMPPP\htdocs\uas_iqsal\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `ri...', 0)
+#1 D:\XAMPPP\htdocs\uas_iqsal\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ri...')
+#2 D:\XAMPPP\htdocs\uas_iqsal\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ri...')
+#3 D:\XAMPPP\htdocs\uas_iqsal\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ri...', Array, false)
+#4 D:\XAMPPP\htdocs\uas_iqsal\app\Controllers\Produk.php(90): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 D:\XAMPPP\htdocs\uas_iqsal\system\CodeIgniter.php(933): App\Controllers\Produk->laporan()
+#6 D:\XAMPPP\htdocs\uas_iqsal\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produk))
+#7 D:\XAMPPP\htdocs\uas_iqsal\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\XAMPPP\htdocs\uas_iqsal\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#9 D:\XAMPPP\htdocs\uas_iqsal\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 D:\XAMPPP\htdocs\uas_iqsal\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 D:\XAMPPP\htdocs\uas_iqsal\system\rewrite.php(44): require_once('D:\\XAMPPP\\htdoc...')
+#12 {main}
+CRITICAL - 2026-01-03 09:54:49 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'keterangan' in 'field list'
+[Method: POST, Route: produk/laporan]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `riwayat_stok` (`kode_sepeda`, `tipe`, `jumlah`, `keterangan`, `tanggal`) VALUES (:kode_sepeda:, :tipe:, :jumlah:, :keterangan:, :tanggal:)', [...], false)
+ 2 APPPATH\Controllers\Produk.php(90): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Produk->laporan()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produk))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('D:\\XAMPPP\\htdocs\\uas_iqsal\\public\\index.php')
+CRITICAL - 2026-01-03 09:54:49 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'keterangan' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `riwayat_stok` (`kode_sepeda`, `tipe`, `jumlah`, `keterangan`, `tanggal`) VALUES (\'SPD-005\', \'Keluar\', 3, \'Penjualan Unit\', \'2026-01-03 09:54:49\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `riwayat_stok` (`kode_sepeda`, `tipe`, `jumlah`, `keterangan`, `tanggal`) VALUES (\'SPD-005\', \'Keluar\', 3, \'Penjualan Unit\', \'2026-01-03 09:54:49\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `riwayat_stok` (`kode_sepeda`, `tipe`, `jumlah`, `keterangan`, `tanggal`) VALUES (:kode_sepeda:, :tipe:, :jumlah:, :keterangan:, :tanggal:)', [...], false)
+ 4 APPPATH\Controllers\Produk.php(90): CodeIgniter\Database\BaseBuilder->insert([...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Produk->laporan()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produk))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('D:\\XAMPPP\\htdocs\\uas_iqsal\\public\\index.php')
+CRITICAL - 2026-01-03 09:54:49 --> [Caused by] mysqli_sql_exception: Unknown column 'keterangan' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `riwayat_stok` (`kode_sepeda`, `tipe`, `jumlah`, `keterangan`, `tanggal`) VALUES (\'SPD-005\', \'Keluar\', 3, \'Penjualan Unit\', \'2026-01-03 09:54:49\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `riwayat_stok` (`kode_sepeda`, `tipe`, `jumlah`, `keterangan`, `tanggal`) VALUES (\'SPD-005\', \'Keluar\', 3, \'Penjualan Unit\', \'2026-01-03 09:54:49\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `riwayat_stok` (`kode_sepeda`, `tipe`, `jumlah`, `keterangan`, `tanggal`) VALUES (\'SPD-005\', \'Keluar\', 3, \'Penjualan Unit\', \'2026-01-03 09:54:49\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `riwayat_stok` (`kode_sepeda`, `tipe`, `jumlah`, `keterangan`, `tanggal`) VALUES (:kode_sepeda:, :tipe:, :jumlah:, :keterangan:, :tanggal:)', [...], false)
+ 5 APPPATH\Controllers\Produk.php(90): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Produk->laporan()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produk))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\XAMPPP\\htdocs\\uas_iqsal\\public\\index.php')
+DEBUG - 2026-01-03 09:54:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-01-03 09:54:57 --> mysqli_sql_exception: Unknown column 'keterangan' in 'field list' in D:\XAMPPP\htdocs\uas_iqsal\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\XAMPPP\htdocs\uas_iqsal\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `ri...', 0)
+#1 D:\XAMPPP\htdocs\uas_iqsal\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ri...')
+#2 D:\XAMPPP\htdocs\uas_iqsal\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ri...')
+#3 D:\XAMPPP\htdocs\uas_iqsal\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ri...', Array, false)
+#4 D:\XAMPPP\htdocs\uas_iqsal\app\Controllers\Produk.php(90): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 D:\XAMPPP\htdocs\uas_iqsal\system\CodeIgniter.php(933): App\Controllers\Produk->laporan()
+#6 D:\XAMPPP\htdocs\uas_iqsal\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produk))
+#7 D:\XAMPPP\htdocs\uas_iqsal\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\XAMPPP\htdocs\uas_iqsal\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#9 D:\XAMPPP\htdocs\uas_iqsal\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 D:\XAMPPP\htdocs\uas_iqsal\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 D:\XAMPPP\htdocs\uas_iqsal\system\rewrite.php(44): require_once('D:\\XAMPPP\\htdoc...')
+#12 {main}
+CRITICAL - 2026-01-03 09:54:57 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'keterangan' in 'field list'
+[Method: POST, Route: produk/laporan]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `riwayat_stok` (`kode_sepeda`, `tipe`, `jumlah`, `keterangan`, `tanggal`) VALUES (:kode_sepeda:, :tipe:, :jumlah:, :keterangan:, :tanggal:)', [...], false)
+ 2 APPPATH\Controllers\Produk.php(90): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Produk->laporan()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produk))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('D:\\XAMPPP\\htdocs\\uas_iqsal\\public\\index.php')
+CRITICAL - 2026-01-03 09:54:57 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'keterangan' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `riwayat_stok` (`kode_sepeda`, `tipe`, `jumlah`, `keterangan`, `tanggal`) VALUES (\'SPD-005\', \'Keluar\', 3, \'Penjualan Unit\', \'2026-01-03 09:54:57\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `riwayat_stok` (`kode_sepeda`, `tipe`, `jumlah`, `keterangan`, `tanggal`) VALUES (\'SPD-005\', \'Keluar\', 3, \'Penjualan Unit\', \'2026-01-03 09:54:57\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `riwayat_stok` (`kode_sepeda`, `tipe`, `jumlah`, `keterangan`, `tanggal`) VALUES (:kode_sepeda:, :tipe:, :jumlah:, :keterangan:, :tanggal:)', [...], false)
+ 4 APPPATH\Controllers\Produk.php(90): CodeIgniter\Database\BaseBuilder->insert([...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Produk->laporan()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produk))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('D:\\XAMPPP\\htdocs\\uas_iqsal\\public\\index.php')
+CRITICAL - 2026-01-03 09:54:57 --> [Caused by] mysqli_sql_exception: Unknown column 'keterangan' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `riwayat_stok` (`kode_sepeda`, `tipe`, `jumlah`, `keterangan`, `tanggal`) VALUES (\'SPD-005\', \'Keluar\', 3, \'Penjualan Unit\', \'2026-01-03 09:54:57\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `riwayat_stok` (`kode_sepeda`, `tipe`, `jumlah`, `keterangan`, `tanggal`) VALUES (\'SPD-005\', \'Keluar\', 3, \'Penjualan Unit\', \'2026-01-03 09:54:57\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `riwayat_stok` (`kode_sepeda`, `tipe`, `jumlah`, `keterangan`, `tanggal`) VALUES (\'SPD-005\', \'Keluar\', 3, \'Penjualan Unit\', \'2026-01-03 09:54:57\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `riwayat_stok` (`kode_sepeda`, `tipe`, `jumlah`, `keterangan`, `tanggal`) VALUES (:kode_sepeda:, :tipe:, :jumlah:, :keterangan:, :tanggal:)', [...], false)
+ 5 APPPATH\Controllers\Produk.php(90): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Produk->laporan()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produk))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\XAMPPP\\htdocs\\uas_iqsal\\public\\index.php')
+DEBUG - 2026-01-03 09:55:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 09:55:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 09:55:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 09:55:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 09:55:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 09:55:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 09:55:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 09:55:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 09:55:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 09:55:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 09:55:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 09:55:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 09:55:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 09:55:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 09:55:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 09:56:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-01-03 09:56:53 --> mysqli_sql_exception: Unknown column 'riwayat_stok.kode_sepeda' in 'on clause' in D:\XAMPPP\htdocs\uas_iqsal\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\XAMPPP\htdocs\uas_iqsal\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `riwayat...', 0)
+#1 D:\XAMPPP\htdocs\uas_iqsal\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `riwayat...')
+#2 D:\XAMPPP\htdocs\uas_iqsal\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `riwayat...')
+#3 D:\XAMPPP\htdocs\uas_iqsal\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `riwayat...', Array, false)
+#4 D:\XAMPPP\htdocs\uas_iqsal\app\Controllers\Produk.php(62): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\XAMPPP\htdocs\uas_iqsal\system\CodeIgniter.php(933): App\Controllers\Produk->rekap()
+#6 D:\XAMPPP\htdocs\uas_iqsal\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produk))
+#7 D:\XAMPPP\htdocs\uas_iqsal\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\XAMPPP\htdocs\uas_iqsal\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#9 D:\XAMPPP\htdocs\uas_iqsal\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 D:\XAMPPP\htdocs\uas_iqsal\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 D:\XAMPPP\htdocs\uas_iqsal\system\rewrite.php(44): require_once('D:\\XAMPPP\\htdoc...')
+#12 {main}
+CRITICAL - 2026-01-03 09:56:53 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'riwayat_stok.kode_sepeda' in 'on clause'
+[Method: GET, Route: produk/rekap]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `riwayat_stok`.*, `produk`.`nama_sepeda`
+FROM `riwayat_stok`
+JOIN `produk` ON `produk`.`kode_sepeda` = `riwayat_stok`.`kode_sepeda`
+ORDER BY `tanggal` DESC', [], false)
+ 2 APPPATH\Controllers\Produk.php(62): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Produk->rekap()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produk))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('D:\\XAMPPP\\htdocs\\uas_iqsal\\public\\index.php')
+CRITICAL - 2026-01-03 09:56:53 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'riwayat_stok.kode_sepeda' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `riwayat_stok`.*, `produk`.`nama_sepeda`
+FROM `riwayat_stok`
+JOIN `produk` ON `produk`.`kode_sepeda` = `riwayat_stok`.`kode_sepeda`
+ORDER BY `tanggal` DESC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `riwayat_stok`.*, `produk`.`nama_sepeda`
+FROM `riwayat_stok`
+JOIN `produk` ON `produk`.`kode_sepeda` = `riwayat_stok`.`kode_sepeda`
+ORDER BY `tanggal` DESC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `riwayat_stok`.*, `produk`.`nama_sepeda`
+FROM `riwayat_stok`
+JOIN `produk` ON `produk`.`kode_sepeda` = `riwayat_stok`.`kode_sepeda`
+ORDER BY `tanggal` DESC', [], false)
+ 4 APPPATH\Controllers\Produk.php(62): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Produk->rekap()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produk))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('D:\\XAMPPP\\htdocs\\uas_iqsal\\public\\index.php')
+CRITICAL - 2026-01-03 09:56:53 --> [Caused by] mysqli_sql_exception: Unknown column 'riwayat_stok.kode_sepeda' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `riwayat_stok`.*, `produk`.`nama_sepeda`
+FROM `riwayat_stok`
+JOIN `produk` ON `produk`.`kode_sepeda` = `riwayat_stok`.`kode_sepeda`
+ORDER BY `tanggal` DESC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `riwayat_stok`.*, `produk`.`nama_sepeda`
+FROM `riwayat_stok`
+JOIN `produk` ON `produk`.`kode_sepeda` = `riwayat_stok`.`kode_sepeda`
+ORDER BY `tanggal` DESC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `riwayat_stok`.*, `produk`.`nama_sepeda`
+FROM `riwayat_stok`
+JOIN `produk` ON `produk`.`kode_sepeda` = `riwayat_stok`.`kode_sepeda`
+ORDER BY `tanggal` DESC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `riwayat_stok`.*, `produk`.`nama_sepeda`
+FROM `riwayat_stok`
+JOIN `produk` ON `produk`.`kode_sepeda` = `riwayat_stok`.`kode_sepeda`
+ORDER BY `tanggal` DESC', [], false)
+ 5 APPPATH\Controllers\Produk.php(62): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Produk->rekap()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produk))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\XAMPPP\\htdocs\\uas_iqsal\\public\\index.php')
+DEBUG - 2026-01-03 09:56:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-01-03 09:56:53 --> mysqli_sql_exception: Unknown column 'riwayat_stok.kode_sepeda' in 'on clause' in D:\XAMPPP\htdocs\uas_iqsal\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\XAMPPP\htdocs\uas_iqsal\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `riwayat...', 0)
+#1 D:\XAMPPP\htdocs\uas_iqsal\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `riwayat...')
+#2 D:\XAMPPP\htdocs\uas_iqsal\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `riwayat...')
+#3 D:\XAMPPP\htdocs\uas_iqsal\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `riwayat...', Array, false)
+#4 D:\XAMPPP\htdocs\uas_iqsal\app\Controllers\Produk.php(62): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\XAMPPP\htdocs\uas_iqsal\system\CodeIgniter.php(933): App\Controllers\Produk->rekap()
+#6 D:\XAMPPP\htdocs\uas_iqsal\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produk))
+#7 D:\XAMPPP\htdocs\uas_iqsal\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\XAMPPP\htdocs\uas_iqsal\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#9 D:\XAMPPP\htdocs\uas_iqsal\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 D:\XAMPPP\htdocs\uas_iqsal\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 D:\XAMPPP\htdocs\uas_iqsal\system\rewrite.php(44): require_once('D:\\XAMPPP\\htdoc...')
+#12 {main}
+CRITICAL - 2026-01-03 09:56:53 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'riwayat_stok.kode_sepeda' in 'on clause'
+[Method: GET, Route: produk/rekap]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `riwayat_stok`.*, `produk`.`nama_sepeda`
+FROM `riwayat_stok`
+JOIN `produk` ON `produk`.`kode_sepeda` = `riwayat_stok`.`kode_sepeda`
+ORDER BY `tanggal` DESC', [], false)
+ 2 APPPATH\Controllers\Produk.php(62): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Produk->rekap()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produk))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('D:\\XAMPPP\\htdocs\\uas_iqsal\\public\\index.php')
+CRITICAL - 2026-01-03 09:56:53 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'riwayat_stok.kode_sepeda' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `riwayat_stok`.*, `produk`.`nama_sepeda`
+FROM `riwayat_stok`
+JOIN `produk` ON `produk`.`kode_sepeda` = `riwayat_stok`.`kode_sepeda`
+ORDER BY `tanggal` DESC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `riwayat_stok`.*, `produk`.`nama_sepeda`
+FROM `riwayat_stok`
+JOIN `produk` ON `produk`.`kode_sepeda` = `riwayat_stok`.`kode_sepeda`
+ORDER BY `tanggal` DESC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `riwayat_stok`.*, `produk`.`nama_sepeda`
+FROM `riwayat_stok`
+JOIN `produk` ON `produk`.`kode_sepeda` = `riwayat_stok`.`kode_sepeda`
+ORDER BY `tanggal` DESC', [], false)
+ 4 APPPATH\Controllers\Produk.php(62): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Produk->rekap()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produk))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('D:\\XAMPPP\\htdocs\\uas_iqsal\\public\\index.php')
+CRITICAL - 2026-01-03 09:56:53 --> [Caused by] mysqli_sql_exception: Unknown column 'riwayat_stok.kode_sepeda' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `riwayat_stok`.*, `produk`.`nama_sepeda`
+FROM `riwayat_stok`
+JOIN `produk` ON `produk`.`kode_sepeda` = `riwayat_stok`.`kode_sepeda`
+ORDER BY `tanggal` DESC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `riwayat_stok`.*, `produk`.`nama_sepeda`
+FROM `riwayat_stok`
+JOIN `produk` ON `produk`.`kode_sepeda` = `riwayat_stok`.`kode_sepeda`
+ORDER BY `tanggal` DESC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `riwayat_stok`.*, `produk`.`nama_sepeda`
+FROM `riwayat_stok`
+JOIN `produk` ON `produk`.`kode_sepeda` = `riwayat_stok`.`kode_sepeda`
+ORDER BY `tanggal` DESC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `riwayat_stok`.*, `produk`.`nama_sepeda`
+FROM `riwayat_stok`
+JOIN `produk` ON `produk`.`kode_sepeda` = `riwayat_stok`.`kode_sepeda`
+ORDER BY `tanggal` DESC', [], false)
+ 5 APPPATH\Controllers\Produk.php(62): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Produk->rekap()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produk))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\XAMPPP\\htdocs\\uas_iqsal\\public\\index.php')
+DEBUG - 2026-01-03 09:56:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-01-03 09:56:53 --> mysqli_sql_exception: Unknown column 'riwayat_stok.kode_sepeda' in 'on clause' in D:\XAMPPP\htdocs\uas_iqsal\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\XAMPPP\htdocs\uas_iqsal\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `riwayat...', 0)
+#1 D:\XAMPPP\htdocs\uas_iqsal\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `riwayat...')
+#2 D:\XAMPPP\htdocs\uas_iqsal\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `riwayat...')
+#3 D:\XAMPPP\htdocs\uas_iqsal\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `riwayat...', Array, false)
+#4 D:\XAMPPP\htdocs\uas_iqsal\app\Controllers\Produk.php(62): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\XAMPPP\htdocs\uas_iqsal\system\CodeIgniter.php(933): App\Controllers\Produk->rekap()
+#6 D:\XAMPPP\htdocs\uas_iqsal\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produk))
+#7 D:\XAMPPP\htdocs\uas_iqsal\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\XAMPPP\htdocs\uas_iqsal\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#9 D:\XAMPPP\htdocs\uas_iqsal\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 D:\XAMPPP\htdocs\uas_iqsal\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 D:\XAMPPP\htdocs\uas_iqsal\system\rewrite.php(44): require_once('D:\\XAMPPP\\htdoc...')
+#12 {main}
+CRITICAL - 2026-01-03 09:56:53 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'riwayat_stok.kode_sepeda' in 'on clause'
+[Method: GET, Route: produk/rekap]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `riwayat_stok`.*, `produk`.`nama_sepeda`
+FROM `riwayat_stok`
+JOIN `produk` ON `produk`.`kode_sepeda` = `riwayat_stok`.`kode_sepeda`
+ORDER BY `tanggal` DESC', [], false)
+ 2 APPPATH\Controllers\Produk.php(62): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Produk->rekap()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produk))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('D:\\XAMPPP\\htdocs\\uas_iqsal\\public\\index.php')
+CRITICAL - 2026-01-03 09:56:53 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'riwayat_stok.kode_sepeda' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `riwayat_stok`.*, `produk`.`nama_sepeda`
+FROM `riwayat_stok`
+JOIN `produk` ON `produk`.`kode_sepeda` = `riwayat_stok`.`kode_sepeda`
+ORDER BY `tanggal` DESC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `riwayat_stok`.*, `produk`.`nama_sepeda`
+FROM `riwayat_stok`
+JOIN `produk` ON `produk`.`kode_sepeda` = `riwayat_stok`.`kode_sepeda`
+ORDER BY `tanggal` DESC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `riwayat_stok`.*, `produk`.`nama_sepeda`
+FROM `riwayat_stok`
+JOIN `produk` ON `produk`.`kode_sepeda` = `riwayat_stok`.`kode_sepeda`
+ORDER BY `tanggal` DESC', [], false)
+ 4 APPPATH\Controllers\Produk.php(62): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Produk->rekap()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produk))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('D:\\XAMPPP\\htdocs\\uas_iqsal\\public\\index.php')
+CRITICAL - 2026-01-03 09:56:53 --> [Caused by] mysqli_sql_exception: Unknown column 'riwayat_stok.kode_sepeda' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `riwayat_stok`.*, `produk`.`nama_sepeda`
+FROM `riwayat_stok`
+JOIN `produk` ON `produk`.`kode_sepeda` = `riwayat_stok`.`kode_sepeda`
+ORDER BY `tanggal` DESC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `riwayat_stok`.*, `produk`.`nama_sepeda`
+FROM `riwayat_stok`
+JOIN `produk` ON `produk`.`kode_sepeda` = `riwayat_stok`.`kode_sepeda`
+ORDER BY `tanggal` DESC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `riwayat_stok`.*, `produk`.`nama_sepeda`
+FROM `riwayat_stok`
+JOIN `produk` ON `produk`.`kode_sepeda` = `riwayat_stok`.`kode_sepeda`
+ORDER BY `tanggal` DESC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `riwayat_stok`.*, `produk`.`nama_sepeda`
+FROM `riwayat_stok`
+JOIN `produk` ON `produk`.`kode_sepeda` = `riwayat_stok`.`kode_sepeda`
+ORDER BY `tanggal` DESC', [], false)
+ 5 APPPATH\Controllers\Produk.php(62): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Produk->rekap()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produk))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\XAMPPP\\htdocs\\uas_iqsal\\public\\index.php')
+DEBUG - 2026-01-03 09:56:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 09:57:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 09:57:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 09:57:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-01-03 09:57:22 --> mysqli_sql_exception: Unknown column 'kode_sepeda' in 'field list' in D:\XAMPPP\htdocs\uas_iqsal\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\XAMPPP\htdocs\uas_iqsal\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `ri...', 0)
+#1 D:\XAMPPP\htdocs\uas_iqsal\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ri...')
+#2 D:\XAMPPP\htdocs\uas_iqsal\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ri...')
+#3 D:\XAMPPP\htdocs\uas_iqsal\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ri...', Array, false)
+#4 D:\XAMPPP\htdocs\uas_iqsal\app\Controllers\Produk.php(132): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 D:\XAMPPP\htdocs\uas_iqsal\system\CodeIgniter.php(933): App\Controllers\Produk->save()
+#6 D:\XAMPPP\htdocs\uas_iqsal\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produk))
+#7 D:\XAMPPP\htdocs\uas_iqsal\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\XAMPPP\htdocs\uas_iqsal\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#9 D:\XAMPPP\htdocs\uas_iqsal\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 D:\XAMPPP\htdocs\uas_iqsal\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 D:\XAMPPP\htdocs\uas_iqsal\system\rewrite.php(44): require_once('D:\\XAMPPP\\htdoc...')
+#12 {main}
+CRITICAL - 2026-01-03 09:57:22 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'kode_sepeda' in 'field list'
+[Method: POST, Route: produk/simpan]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `riwayat_stok` (`kode_sepeda`, `tipe`, `jumlah`, `keterangan`, `tanggal`) VALUES (:kode_sepeda:, :tipe:, :jumlah:, :keterangan:, :tanggal:)', [...], false)
+ 2 APPPATH\Controllers\Produk.php(132): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Produk->save()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produk))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('D:\\XAMPPP\\htdocs\\uas_iqsal\\public\\index.php')
+CRITICAL - 2026-01-03 09:57:22 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'kode_sepeda' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `riwayat_stok` (`kode_sepeda`, `tipe`, `jumlah`, `keterangan`, `tanggal`) VALUES (\'SPD-005\', \'Masuk\', 3, \'Penambahan Stok Unit (Restock)\', \'2026-01-03 09:57:22\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `riwayat_stok` (`kode_sepeda`, `tipe`, `jumlah`, `keterangan`, `tanggal`) VALUES (\'SPD-005\', \'Masuk\', 3, \'Penambahan Stok Unit (Restock)\', \'2026-01-03 09:57:22\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `riwayat_stok` (`kode_sepeda`, `tipe`, `jumlah`, `keterangan`, `tanggal`) VALUES (:kode_sepeda:, :tipe:, :jumlah:, :keterangan:, :tanggal:)', [...], false)
+ 4 APPPATH\Controllers\Produk.php(132): CodeIgniter\Database\BaseBuilder->insert([...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Produk->save()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produk))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('D:\\XAMPPP\\htdocs\\uas_iqsal\\public\\index.php')
+CRITICAL - 2026-01-03 09:57:22 --> [Caused by] mysqli_sql_exception: Unknown column 'kode_sepeda' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `riwayat_stok` (`kode_sepeda`, `tipe`, `jumlah`, `keterangan`, `tanggal`) VALUES (\'SPD-005\', \'Masuk\', 3, \'Penambahan Stok Unit (Restock)\', \'2026-01-03 09:57:22\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `riwayat_stok` (`kode_sepeda`, `tipe`, `jumlah`, `keterangan`, `tanggal`) VALUES (\'SPD-005\', \'Masuk\', 3, \'Penambahan Stok Unit (Restock)\', \'2026-01-03 09:57:22\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `riwayat_stok` (`kode_sepeda`, `tipe`, `jumlah`, `keterangan`, `tanggal`) VALUES (\'SPD-005\', \'Masuk\', 3, \'Penambahan Stok Unit (Restock)\', \'2026-01-03 09:57:22\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `riwayat_stok` (`kode_sepeda`, `tipe`, `jumlah`, `keterangan`, `tanggal`) VALUES (:kode_sepeda:, :tipe:, :jumlah:, :keterangan:, :tanggal:)', [...], false)
+ 5 APPPATH\Controllers\Produk.php(132): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Produk->save()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produk))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\XAMPPP\\htdocs\\uas_iqsal\\public\\index.php')
+DEBUG - 2026-01-03 09:57:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 09:57:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-01-03 09:57:55 --> mysqli_sql_exception: Unknown column 'kode_sepeda' in 'field list' in D:\XAMPPP\htdocs\uas_iqsal\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\XAMPPP\htdocs\uas_iqsal\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `ri...', 0)
+#1 D:\XAMPPP\htdocs\uas_iqsal\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ri...')
+#2 D:\XAMPPP\htdocs\uas_iqsal\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ri...')
+#3 D:\XAMPPP\htdocs\uas_iqsal\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ri...', Array, false)
+#4 D:\XAMPPP\htdocs\uas_iqsal\app\Controllers\Produk.php(132): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 D:\XAMPPP\htdocs\uas_iqsal\system\CodeIgniter.php(933): App\Controllers\Produk->save()
+#6 D:\XAMPPP\htdocs\uas_iqsal\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produk))
+#7 D:\XAMPPP\htdocs\uas_iqsal\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\XAMPPP\htdocs\uas_iqsal\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#9 D:\XAMPPP\htdocs\uas_iqsal\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 D:\XAMPPP\htdocs\uas_iqsal\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 D:\XAMPPP\htdocs\uas_iqsal\system\rewrite.php(44): require_once('D:\\XAMPPP\\htdoc...')
+#12 {main}
+CRITICAL - 2026-01-03 09:57:55 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'kode_sepeda' in 'field list'
+[Method: POST, Route: produk/simpan]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `riwayat_stok` (`kode_sepeda`, `tipe`, `jumlah`, `keterangan`, `tanggal`) VALUES (:kode_sepeda:, :tipe:, :jumlah:, :keterangan:, :tanggal:)', [...], false)
+ 2 APPPATH\Controllers\Produk.php(132): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Produk->save()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produk))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('D:\\XAMPPP\\htdocs\\uas_iqsal\\public\\index.php')
+CRITICAL - 2026-01-03 09:57:55 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'kode_sepeda' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `riwayat_stok` (`kode_sepeda`, `tipe`, `jumlah`, `keterangan`, `tanggal`) VALUES (\'SPD-009\', \'Masuk\', 4, \'Daftar Unit Baru di Gudang\', \'2026-01-03 09:57:55\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `riwayat_stok` (`kode_sepeda`, `tipe`, `jumlah`, `keterangan`, `tanggal`) VALUES (\'SPD-009\', \'Masuk\', 4, \'Daftar Unit Baru di Gudang\', \'2026-01-03 09:57:55\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `riwayat_stok` (`kode_sepeda`, `tipe`, `jumlah`, `keterangan`, `tanggal`) VALUES (:kode_sepeda:, :tipe:, :jumlah:, :keterangan:, :tanggal:)', [...], false)
+ 4 APPPATH\Controllers\Produk.php(132): CodeIgniter\Database\BaseBuilder->insert([...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Produk->save()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produk))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('D:\\XAMPPP\\htdocs\\uas_iqsal\\public\\index.php')
+CRITICAL - 2026-01-03 09:57:55 --> [Caused by] mysqli_sql_exception: Unknown column 'kode_sepeda' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `riwayat_stok` (`kode_sepeda`, `tipe`, `jumlah`, `keterangan`, `tanggal`) VALUES (\'SPD-009\', \'Masuk\', 4, \'Daftar Unit Baru di Gudang\', \'2026-01-03 09:57:55\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `riwayat_stok` (`kode_sepeda`, `tipe`, `jumlah`, `keterangan`, `tanggal`) VALUES (\'SPD-009\', \'Masuk\', 4, \'Daftar Unit Baru di Gudang\', \'2026-01-03 09:57:55\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `riwayat_stok` (`kode_sepeda`, `tipe`, `jumlah`, `keterangan`, `tanggal`) VALUES (\'SPD-009\', \'Masuk\', 4, \'Daftar Unit Baru di Gudang\', \'2026-01-03 09:57:55\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `riwayat_stok` (`kode_sepeda`, `tipe`, `jumlah`, `keterangan`, `tanggal`) VALUES (:kode_sepeda:, :tipe:, :jumlah:, :keterangan:, :tanggal:)', [...], false)
+ 5 APPPATH\Controllers\Produk.php(132): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Produk->save()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produk))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\XAMPPP\\htdocs\\uas_iqsal\\public\\index.php')
+DEBUG - 2026-01-03 09:57:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-01-03 09:57:59 --> mysqli_sql_exception: Unknown column 'kode_sepeda' in 'field list' in D:\XAMPPP\htdocs\uas_iqsal\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\XAMPPP\htdocs\uas_iqsal\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `ri...', 0)
+#1 D:\XAMPPP\htdocs\uas_iqsal\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ri...')
+#2 D:\XAMPPP\htdocs\uas_iqsal\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ri...')
+#3 D:\XAMPPP\htdocs\uas_iqsal\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ri...', Array, false)
+#4 D:\XAMPPP\htdocs\uas_iqsal\app\Controllers\Produk.php(132): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 D:\XAMPPP\htdocs\uas_iqsal\system\CodeIgniter.php(933): App\Controllers\Produk->save()
+#6 D:\XAMPPP\htdocs\uas_iqsal\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produk))
+#7 D:\XAMPPP\htdocs\uas_iqsal\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\XAMPPP\htdocs\uas_iqsal\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#9 D:\XAMPPP\htdocs\uas_iqsal\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 D:\XAMPPP\htdocs\uas_iqsal\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 D:\XAMPPP\htdocs\uas_iqsal\system\rewrite.php(44): require_once('D:\\XAMPPP\\htdoc...')
+#12 {main}
+CRITICAL - 2026-01-03 09:57:59 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'kode_sepeda' in 'field list'
+[Method: POST, Route: produk/simpan]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `riwayat_stok` (`kode_sepeda`, `tipe`, `jumlah`, `keterangan`, `tanggal`) VALUES (:kode_sepeda:, :tipe:, :jumlah:, :keterangan:, :tanggal:)', [...], false)
+ 2 APPPATH\Controllers\Produk.php(132): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Produk->save()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produk))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('D:\\XAMPPP\\htdocs\\uas_iqsal\\public\\index.php')
+CRITICAL - 2026-01-03 09:57:59 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'kode_sepeda' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `riwayat_stok` (`kode_sepeda`, `tipe`, `jumlah`, `keterangan`, `tanggal`) VALUES (\'SPD-009\', \'Masuk\', 4, \'Penambahan Stok Unit (Restock)\', \'2026-01-03 09:57:59\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `riwayat_stok` (`kode_sepeda`, `tipe`, `jumlah`, `keterangan`, `tanggal`) VALUES (\'SPD-009\', \'Masuk\', 4, \'Penambahan Stok Unit (Restock)\', \'2026-01-03 09:57:59\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `riwayat_stok` (`kode_sepeda`, `tipe`, `jumlah`, `keterangan`, `tanggal`) VALUES (:kode_sepeda:, :tipe:, :jumlah:, :keterangan:, :tanggal:)', [...], false)
+ 4 APPPATH\Controllers\Produk.php(132): CodeIgniter\Database\BaseBuilder->insert([...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Produk->save()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produk))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('D:\\XAMPPP\\htdocs\\uas_iqsal\\public\\index.php')
+CRITICAL - 2026-01-03 09:57:59 --> [Caused by] mysqli_sql_exception: Unknown column 'kode_sepeda' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `riwayat_stok` (`kode_sepeda`, `tipe`, `jumlah`, `keterangan`, `tanggal`) VALUES (\'SPD-009\', \'Masuk\', 4, \'Penambahan Stok Unit (Restock)\', \'2026-01-03 09:57:59\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `riwayat_stok` (`kode_sepeda`, `tipe`, `jumlah`, `keterangan`, `tanggal`) VALUES (\'SPD-009\', \'Masuk\', 4, \'Penambahan Stok Unit (Restock)\', \'2026-01-03 09:57:59\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `riwayat_stok` (`kode_sepeda`, `tipe`, `jumlah`, `keterangan`, `tanggal`) VALUES (\'SPD-009\', \'Masuk\', 4, \'Penambahan Stok Unit (Restock)\', \'2026-01-03 09:57:59\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `riwayat_stok` (`kode_sepeda`, `tipe`, `jumlah`, `keterangan`, `tanggal`) VALUES (:kode_sepeda:, :tipe:, :jumlah:, :keterangan:, :tanggal:)', [...], false)
+ 5 APPPATH\Controllers\Produk.php(132): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Produk->save()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produk))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\XAMPPP\\htdocs\\uas_iqsal\\public\\index.php')
+DEBUG - 2026-01-03 09:59:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-01-03 09:59:45 --> mysqli_sql_exception: Unknown column 'kode_sepeda' in 'field list' in D:\XAMPPP\htdocs\uas_iqsal\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\XAMPPP\htdocs\uas_iqsal\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `ri...', 0)
+#1 D:\XAMPPP\htdocs\uas_iqsal\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ri...')
+#2 D:\XAMPPP\htdocs\uas_iqsal\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ri...')
+#3 D:\XAMPPP\htdocs\uas_iqsal\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ri...', Array, false)
+#4 D:\XAMPPP\htdocs\uas_iqsal\app\Controllers\Produk.php(132): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 D:\XAMPPP\htdocs\uas_iqsal\system\CodeIgniter.php(933): App\Controllers\Produk->save()
+#6 D:\XAMPPP\htdocs\uas_iqsal\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produk))
+#7 D:\XAMPPP\htdocs\uas_iqsal\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\XAMPPP\htdocs\uas_iqsal\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#9 D:\XAMPPP\htdocs\uas_iqsal\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 D:\XAMPPP\htdocs\uas_iqsal\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 D:\XAMPPP\htdocs\uas_iqsal\system\rewrite.php(44): require_once('D:\\XAMPPP\\htdoc...')
+#12 {main}
+CRITICAL - 2026-01-03 09:59:45 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'kode_sepeda' in 'field list'
+[Method: POST, Route: produk/simpan]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `riwayat_stok` (`kode_sepeda`, `tipe`, `jumlah`, `keterangan`, `tanggal`) VALUES (:kode_sepeda:, :tipe:, :jumlah:, :keterangan:, :tanggal:)', [...], false)
+ 2 APPPATH\Controllers\Produk.php(132): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Produk->save()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produk))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('D:\\XAMPPP\\htdocs\\uas_iqsal\\public\\index.php')
+CRITICAL - 2026-01-03 09:59:45 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'kode_sepeda' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `riwayat_stok` (`kode_sepeda`, `tipe`, `jumlah`, `keterangan`, `tanggal`) VALUES (\'SPD-009\', \'Masuk\', 4, \'Penambahan Stok Unit (Restock)\', \'2026-01-03 09:59:45\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `riwayat_stok` (`kode_sepeda`, `tipe`, `jumlah`, `keterangan`, `tanggal`) VALUES (\'SPD-009\', \'Masuk\', 4, \'Penambahan Stok Unit (Restock)\', \'2026-01-03 09:59:45\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `riwayat_stok` (`kode_sepeda`, `tipe`, `jumlah`, `keterangan`, `tanggal`) VALUES (:kode_sepeda:, :tipe:, :jumlah:, :keterangan:, :tanggal:)', [...], false)
+ 4 APPPATH\Controllers\Produk.php(132): CodeIgniter\Database\BaseBuilder->insert([...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Produk->save()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produk))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('D:\\XAMPPP\\htdocs\\uas_iqsal\\public\\index.php')
+CRITICAL - 2026-01-03 09:59:45 --> [Caused by] mysqli_sql_exception: Unknown column 'kode_sepeda' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `riwayat_stok` (`kode_sepeda`, `tipe`, `jumlah`, `keterangan`, `tanggal`) VALUES (\'SPD-009\', \'Masuk\', 4, \'Penambahan Stok Unit (Restock)\', \'2026-01-03 09:59:45\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `riwayat_stok` (`kode_sepeda`, `tipe`, `jumlah`, `keterangan`, `tanggal`) VALUES (\'SPD-009\', \'Masuk\', 4, \'Penambahan Stok Unit (Restock)\', \'2026-01-03 09:59:45\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `riwayat_stok` (`kode_sepeda`, `tipe`, `jumlah`, `keterangan`, `tanggal`) VALUES (\'SPD-009\', \'Masuk\', 4, \'Penambahan Stok Unit (Restock)\', \'2026-01-03 09:59:45\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `riwayat_stok` (`kode_sepeda`, `tipe`, `jumlah`, `keterangan`, `tanggal`) VALUES (:kode_sepeda:, :tipe:, :jumlah:, :keterangan:, :tanggal:)', [...], false)
+ 5 APPPATH\Controllers\Produk.php(132): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Produk->save()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produk))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\XAMPPP\\htdocs\\uas_iqsal\\public\\index.php')
+DEBUG - 2026-01-03 09:59:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-01-03 09:59:48 --> mysqli_sql_exception: Unknown column 'kode_sepeda' in 'field list' in D:\XAMPPP\htdocs\uas_iqsal\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\XAMPPP\htdocs\uas_iqsal\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `ri...', 0)
+#1 D:\XAMPPP\htdocs\uas_iqsal\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ri...')
+#2 D:\XAMPPP\htdocs\uas_iqsal\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ri...')
+#3 D:\XAMPPP\htdocs\uas_iqsal\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ri...', Array, false)
+#4 D:\XAMPPP\htdocs\uas_iqsal\app\Controllers\Produk.php(132): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 D:\XAMPPP\htdocs\uas_iqsal\system\CodeIgniter.php(933): App\Controllers\Produk->save()
+#6 D:\XAMPPP\htdocs\uas_iqsal\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produk))
+#7 D:\XAMPPP\htdocs\uas_iqsal\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\XAMPPP\htdocs\uas_iqsal\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#9 D:\XAMPPP\htdocs\uas_iqsal\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 D:\XAMPPP\htdocs\uas_iqsal\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 D:\XAMPPP\htdocs\uas_iqsal\system\rewrite.php(44): require_once('D:\\XAMPPP\\htdoc...')
+#12 {main}
+CRITICAL - 2026-01-03 09:59:48 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'kode_sepeda' in 'field list'
+[Method: POST, Route: produk/simpan]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `riwayat_stok` (`kode_sepeda`, `tipe`, `jumlah`, `keterangan`, `tanggal`) VALUES (:kode_sepeda:, :tipe:, :jumlah:, :keterangan:, :tanggal:)', [...], false)
+ 2 APPPATH\Controllers\Produk.php(132): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Produk->save()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produk))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('D:\\XAMPPP\\htdocs\\uas_iqsal\\public\\index.php')
+CRITICAL - 2026-01-03 09:59:48 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'kode_sepeda' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `riwayat_stok` (`kode_sepeda`, `tipe`, `jumlah`, `keterangan`, `tanggal`) VALUES (\'SPD-009\', \'Masuk\', 4, \'Penambahan Stok Unit (Restock)\', \'2026-01-03 09:59:48\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `riwayat_stok` (`kode_sepeda`, `tipe`, `jumlah`, `keterangan`, `tanggal`) VALUES (\'SPD-009\', \'Masuk\', 4, \'Penambahan Stok Unit (Restock)\', \'2026-01-03 09:59:48\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `riwayat_stok` (`kode_sepeda`, `tipe`, `jumlah`, `keterangan`, `tanggal`) VALUES (:kode_sepeda:, :tipe:, :jumlah:, :keterangan:, :tanggal:)', [...], false)
+ 4 APPPATH\Controllers\Produk.php(132): CodeIgniter\Database\BaseBuilder->insert([...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Produk->save()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produk))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('D:\\XAMPPP\\htdocs\\uas_iqsal\\public\\index.php')
+CRITICAL - 2026-01-03 09:59:48 --> [Caused by] mysqli_sql_exception: Unknown column 'kode_sepeda' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `riwayat_stok` (`kode_sepeda`, `tipe`, `jumlah`, `keterangan`, `tanggal`) VALUES (\'SPD-009\', \'Masuk\', 4, \'Penambahan Stok Unit (Restock)\', \'2026-01-03 09:59:48\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `riwayat_stok` (`kode_sepeda`, `tipe`, `jumlah`, `keterangan`, `tanggal`) VALUES (\'SPD-009\', \'Masuk\', 4, \'Penambahan Stok Unit (Restock)\', \'2026-01-03 09:59:48\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `riwayat_stok` (`kode_sepeda`, `tipe`, `jumlah`, `keterangan`, `tanggal`) VALUES (\'SPD-009\', \'Masuk\', 4, \'Penambahan Stok Unit (Restock)\', \'2026-01-03 09:59:48\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `riwayat_stok` (`kode_sepeda`, `tipe`, `jumlah`, `keterangan`, `tanggal`) VALUES (:kode_sepeda:, :tipe:, :jumlah:, :keterangan:, :tanggal:)', [...], false)
+ 5 APPPATH\Controllers\Produk.php(132): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Produk->save()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produk))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\XAMPPP\\htdocs\\uas_iqsal\\public\\index.php')
+DEBUG - 2026-01-03 10:01:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 10:01:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-01-03 10:01:35 --> mysqli_sql_exception: Unknown column 'kode_sepeda' in 'field list' in D:\XAMPPP\htdocs\uas_iqsal\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\XAMPPP\htdocs\uas_iqsal\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `ri...', 0)
+#1 D:\XAMPPP\htdocs\uas_iqsal\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ri...')
+#2 D:\XAMPPP\htdocs\uas_iqsal\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ri...')
+#3 D:\XAMPPP\htdocs\uas_iqsal\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ri...', Array, false)
+#4 D:\XAMPPP\htdocs\uas_iqsal\app\Controllers\Produk.php(129): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 D:\XAMPPP\htdocs\uas_iqsal\system\CodeIgniter.php(933): App\Controllers\Produk->save()
+#6 D:\XAMPPP\htdocs\uas_iqsal\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produk))
+#7 D:\XAMPPP\htdocs\uas_iqsal\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\XAMPPP\htdocs\uas_iqsal\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#9 D:\XAMPPP\htdocs\uas_iqsal\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 D:\XAMPPP\htdocs\uas_iqsal\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 D:\XAMPPP\htdocs\uas_iqsal\system\rewrite.php(44): require_once('D:\\XAMPPP\\htdoc...')
+#12 {main}
+CRITICAL - 2026-01-03 10:01:35 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'kode_sepeda' in 'field list'
+[Method: POST, Route: produk/simpan]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `riwayat_stok` (`kode_sepeda`, `tipe`, `jumlah`, `keterangan`, `tanggal`) VALUES (:kode_sepeda:, :tipe:, :jumlah:, :keterangan:, :tanggal:)', [...], false)
+ 2 APPPATH\Controllers\Produk.php(129): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Produk->save()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produk))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('D:\\XAMPPP\\htdocs\\uas_iqsal\\public\\index.php')
+CRITICAL - 2026-01-03 10:01:35 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'kode_sepeda' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `riwayat_stok` (`kode_sepeda`, `tipe`, `jumlah`, `keterangan`, `tanggal`) VALUES (\'SPD-009\', \'Masuk\', 5, \'Restock / Penambahan Stok\', \'2026-01-03 10:01:35\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `riwayat_stok` (`kode_sepeda`, `tipe`, `jumlah`, `keterangan`, `tanggal`) VALUES (\'SPD-009\', \'Masuk\', 5, \'Restock / Penambahan Stok\', \'2026-01-03 10:01:35\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `riwayat_stok` (`kode_sepeda`, `tipe`, `jumlah`, `keterangan`, `tanggal`) VALUES (:kode_sepeda:, :tipe:, :jumlah:, :keterangan:, :tanggal:)', [...], false)
+ 4 APPPATH\Controllers\Produk.php(129): CodeIgniter\Database\BaseBuilder->insert([...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Produk->save()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produk))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('D:\\XAMPPP\\htdocs\\uas_iqsal\\public\\index.php')
+CRITICAL - 2026-01-03 10:01:35 --> [Caused by] mysqli_sql_exception: Unknown column 'kode_sepeda' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `riwayat_stok` (`kode_sepeda`, `tipe`, `jumlah`, `keterangan`, `tanggal`) VALUES (\'SPD-009\', \'Masuk\', 5, \'Restock / Penambahan Stok\', \'2026-01-03 10:01:35\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `riwayat_stok` (`kode_sepeda`, `tipe`, `jumlah`, `keterangan`, `tanggal`) VALUES (\'SPD-009\', \'Masuk\', 5, \'Restock / Penambahan Stok\', \'2026-01-03 10:01:35\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `riwayat_stok` (`kode_sepeda`, `tipe`, `jumlah`, `keterangan`, `tanggal`) VALUES (\'SPD-009\', \'Masuk\', 5, \'Restock / Penambahan Stok\', \'2026-01-03 10:01:35\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `riwayat_stok` (`kode_sepeda`, `tipe`, `jumlah`, `keterangan`, `tanggal`) VALUES (:kode_sepeda:, :tipe:, :jumlah:, :keterangan:, :tanggal:)', [...], false)
+ 5 APPPATH\Controllers\Produk.php(129): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Produk->save()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produk))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\XAMPPP\\htdocs\\uas_iqsal\\public\\index.php')
+DEBUG - 2026-01-03 10:02:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-01-03 10:02:03 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`db_uas`.`produk`, CONSTRAINT `produk_ibfk_1` FOREIGN KEY (`id_kategori`) REFERENCES `kategori` (`id_kategori`) ON DELETE SET NULL) in D:\XAMPPP\htdocs\uas_iqsal\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\XAMPPP\htdocs\uas_iqsal\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `pr...', 0)
+#1 D:\XAMPPP\htdocs\uas_iqsal\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pr...')
+#2 D:\XAMPPP\htdocs\uas_iqsal\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pr...')
+#3 D:\XAMPPP\htdocs\uas_iqsal\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pr...', Array, false)
+#4 D:\XAMPPP\htdocs\uas_iqsal\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 D:\XAMPPP\htdocs\uas_iqsal\system\BaseModel.php(838): CodeIgniter\Model->doInsert(Array)
+#6 D:\XAMPPP\htdocs\uas_iqsal\system\Model.php(797): CodeIgniter\BaseModel->insert(Array, true)
+#7 D:\XAMPPP\htdocs\uas_iqsal\app\Controllers\Produk.php(119): CodeIgniter\Model->insert(Array)
+#8 D:\XAMPPP\htdocs\uas_iqsal\system\CodeIgniter.php(933): App\Controllers\Produk->save()
+#9 D:\XAMPPP\htdocs\uas_iqsal\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produk))
+#10 D:\XAMPPP\htdocs\uas_iqsal\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\XAMPPP\htdocs\uas_iqsal\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#12 D:\XAMPPP\htdocs\uas_iqsal\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 D:\XAMPPP\htdocs\uas_iqsal\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 D:\XAMPPP\htdocs\uas_iqsal\system\rewrite.php(44): require_once('D:\\XAMPPP\\htdoc...')
+#15 {main}
+CRITICAL - 2026-01-03 10:02:03 --> CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`db_uas`.`produk`, CONSTRAINT `produk_ibfk_1` FOREIGN KEY (`id_kategori`) REFERENCES `kategori` (`id_kategori`) ON DELETE SET NULL)
+[Method: POST, Route: produk/simpan]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `produk` (`kode_sepeda`, `nama_sepeda`, `id_kategori`, `stok`, `harga`) VALUES (:kode_sepeda:, :nama_sepeda:, :id_kategori:, :stok:, :harga:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(838): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(797): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\Produk.php(119): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Produk->save()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produk))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\XAMPPP\\htdocs\\uas_iqsal\\public\\index.php')
+CRITICAL - 2026-01-03 10:02:03 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`db_uas`.`produk`, CONSTRAINT `produk_ibfk_1` FOREIGN KEY (`id_kategori`) REFERENCES `kategori` (`id_kategori`) ON DELETE SET NULL)
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `produk` (`kode_sepeda`, `nama_sepeda`, `id_kategori`, `stok`, `harga`) VALUES (\'SPD-009\', \'BMX SHIVVA\', \'1\', 5, \'4000000\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `produk` (`kode_sepeda`, `nama_sepeda`, `id_kategori`, `stok`, `harga`) VALUES (\'SPD-009\', \'BMX SHIVVA\', \'1\', 5, \'4000000\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `produk` (`kode_sepeda`, `nama_sepeda`, `id_kategori`, `stok`, `harga`) VALUES (:kode_sepeda:, :nama_sepeda:, :id_kategori:, :stok:, :harga:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(838): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(797): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\Produk.php(119): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Produk->save()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produk))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('D:\\XAMPPP\\htdocs\\uas_iqsal\\public\\index.php')
+CRITICAL - 2026-01-03 10:02:03 --> [Caused by] mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`db_uas`.`produk`, CONSTRAINT `produk_ibfk_1` FOREIGN KEY (`id_kategori`) REFERENCES `kategori` (`id_kategori`) ON DELETE SET NULL)
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `produk` (`kode_sepeda`, `nama_sepeda`, `id_kategori`, `stok`, `harga`) VALUES (\'SPD-009\', \'BMX SHIVVA\', \'1\', 5, \'4000000\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `produk` (`kode_sepeda`, `nama_sepeda`, `id_kategori`, `stok`, `harga`) VALUES (\'SPD-009\', \'BMX SHIVVA\', \'1\', 5, \'4000000\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `produk` (`kode_sepeda`, `nama_sepeda`, `id_kategori`, `stok`, `harga`) VALUES (\'SPD-009\', \'BMX SHIVVA\', \'1\', 5, \'4000000\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `produk` (`kode_sepeda`, `nama_sepeda`, `id_kategori`, `stok`, `harga`) VALUES (:kode_sepeda:, :nama_sepeda:, :id_kategori:, :stok:, :harga:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(838): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(797): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Produk.php(119): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Produk->save()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produk))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('D:\\XAMPPP\\htdocs\\uas_iqsal\\public\\index.php')
+DEBUG - 2026-01-03 10:02:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 10:02:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 10:02:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 10:02:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 10:03:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 10:03:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 10:03:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 10:03:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 10:03:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 10:03:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 10:03:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 10:04:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 10:21:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 10:22:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 10:22:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 10:22:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 10:22:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 10:22:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 10:22:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 10:22:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 10:22:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 10:22:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 10:22:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 10:22:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 10:22:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 10:23:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-01-03 10:23:58 --> CodeIgniter\HTTP\Exceptions\BadRequestException: The URI you submitted has disallowed characters: "assets\img"
+[Method: GET, Route: public/assets%5Cimg/21.png]
+in SYSTEMPATH\Router\Router.php on line 741.
+ 1 SYSTEMPATH\Router\Router.php(207): CodeIgniter\Router\Router->checkDisallowedChars('public/assets\\img/21.png')
+ 2 SYSTEMPATH\CodeIgniter.php(832): CodeIgniter\Router\Router->handle('public/assets\\img/21.png')
+ 3 SYSTEMPATH\CodeIgniter.php(455): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('D:\\XAMPPP\\htdocs\\uas_iqsal\\public\\index.php')
+DEBUG - 2026-01-03 10:24:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 10:24:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 10:24:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 10:24:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 10:24:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 10:24:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 10:24:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 10:24:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 10:24:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 10:24:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 10:24:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 10:24:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 10:24:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 10:24:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 10:24:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 10:24:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 10:24:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 10:25:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 10:25:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 10:25:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 10:25:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 10:26:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 10:26:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 10:26:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 11:17:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 11:18:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 11:18:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 11:18:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 11:18:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 11:18:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 11:19:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 11:25:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 11:25:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 11:25:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 11:26:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 11:28:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 11:31:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 11:32:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 11:32:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 11:32:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 11:32:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 11:32:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 11:32:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 11:32:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 11:32:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 11:34:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 11:35:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 11:35:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 11:35:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 11:35:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 11:36:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 11:36:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 11:36:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 11:36:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 11:36:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 11:36:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 11:37:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 11:37:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 11:38:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 11:38:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 11:38:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 11:38:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 11:38:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 11:39:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 11:40:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 11:40:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 11:40:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 11:40:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 11:42:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 11:42:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 11:42:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 11:42:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 11:44:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 11:46:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 11:47:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 11:47:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 11:47:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 11:47:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 11:49:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 11:49:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 11:50:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 11:51:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 11:53:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 11:53:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 11:58:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 11:59:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 11:59:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 11:59:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 11:59:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 11:59:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 12:00:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 12:00:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 12:00:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 12:03:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 12:04:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 12:04:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 12:05:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 12:05:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 12:06:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 12:06:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 12:06:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 12:07:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 12:07:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 12:08:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 12:08:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 12:08:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 12:08:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 12:09:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 12:12:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 12:13:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-03 12:16:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-01-03 12:16:27 --> Error: Undefined constant "a"
+[Method: GET, Route: produk/rekap]
+in APPPATH\Views\layout\template.php on line 65.
+ 1 SYSTEMPATH\View\View.php(226): include()
+ 2 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\View\View.php(242): CodeIgniter\View\View->render('layout/template', [], true)
+ 4 SYSTEMPATH\Common.php(1199): CodeIgniter\View\View->render('produk/rekap', [], true)
+ 5 APPPATH\Controllers\Produk.php(70): view('produk/rekap', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Produk->rekap()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produk))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\XAMPPP\\htdocs\\uas_iqsal\\public\\index.php')
+DEBUG - 2026-01-03 12:16:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

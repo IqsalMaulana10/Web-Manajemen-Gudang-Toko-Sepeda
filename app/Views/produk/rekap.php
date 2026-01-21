@@ -132,7 +132,7 @@
     </div>
     <div class="flex gap-4 relative z-10 w-full lg:w-auto">
         <a href="<?= base_url('produk') ?>" class="w-full lg:w-auto bg-brand-gradient text-white px-12 py-6 rounded-[30px] font-black text-xs uppercase tracking-[0.3em] hover:scale-105 transition-all shadow-2xl shadow-teal-900/50 text-center italic">
-            Balik Ke Dashboard anjay
+            Balik Ke Dashboard ok
         </a>
     </div>
     <div class="absolute right-0 top-0 text-[180px] font-black text-white/5 italic select-none pointer-events-none uppercase tracking-tighter">ARSIP</div>

@@ -35,3 +35,55 @@ Ensure you have the following installed:
 ```bash
 git clone [https://github.com/your-username/your-repo-name.git](https://github.com/your-username/your-repo-name.git)
 cd your-repo-name
+```
+### 3. Database Configuration
+Open your database manager (e.g., phpMyAdmin).
+
+Create a new database named: db_uas.
+
+Import the provided .sql file (if available) into the database.
+
+To link the database to the system: Open the configuration file located at: app/Config/Database.php
+
+Update the $default array settings:
+```bash
+PHP
+public array $default = [
+    'DSN'          => '',
+    'hostname'     => 'localhost',
+    'username'     => 'root',         // Your DB username
+    'password'     => '',             // Your DB password
+    'database'     => 'db_uas',       // Must match your DB name
+    'DBDriver'     => 'MySQLi',
+    'DBPrefix'     => '',
+    'pConnect'     => false,
+    'DBDebug'      => true,
+    'charset'      => 'utf8mb4',
+    'DBCollat'     => 'utf8mb4_general_ci',
+    'swapPre'      => '',
+    'encrypt'      => false,
+    'compress'     => false,
+    'strictOn'     => false,
+    'failover'     => [],
+    'port'         => 3306,
+    'numberNative' => false,
+];
+```
+### 4. Running the Project
+Use the built-in CodeIgniter server:
+
+Bash
+php spark serve
+Open your browser and navigate to: http://localhost:8080
+
+## 📁 Project Structure
+app/Controllers: Contains the logic for CRUD and Data Recap.
+
+app/Models: Handles interactions with the db_uas database.
+
+app/Views: Contains the frontend user interface.
+
+app/Config/Database.php: The primary file for database connection settings.
+
+## 🤝 Contributing
+If you'd like to contribute, please fork the repository and use a feature branch. Pull requests are warmly welcome.

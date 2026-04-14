@@ -8,7 +8,7 @@
         <div class="max-w-xl text-center md:text-left">
             
             <h2 class="text-6xl font-black mb-6 tracking-tighter italic uppercase">BIKE BIKE AJA <br><span class="text-teal-200">INVETORI DIGITAL</span></h2>
-            <p class="text-teal-50 text-lg opacity-80 leading-relaxed font-medium italic underline decoration-teal-300 decoration-2 underline-offset-4">Sistem Manajemen Stok Pusat BIKE BIKE AJA STORE</p>
+            <p class="text-teal-50 text-lg opacity-80 leading-relaxed font-medium italic underline decoration-teal-300 decoration-2 underline-offset-4">Sistem Manajemen Stok Pusat BIKE BIKE AJAH STORE</p>
         </div>
         
     </div>
